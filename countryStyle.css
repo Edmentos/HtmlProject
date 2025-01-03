@@ -1,0 +1,59 @@
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/006/580/315/non_2x/high-quality-map-of-europe-with-country-border-vector.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.button-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+}
+
+.team-button {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+}
+
+.team-button.united {
+    top: 0;
+    left: 25%;
+}
+
+.team-button.city {
+    top: 0;
+    left: 60%;
+}
+
+.team-button.chelsea {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.team-button.arsenal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.team-button.liverpool {
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+}
