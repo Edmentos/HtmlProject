@@ -1,5 +1,5 @@
 body {
-    background-image: url('https://static.vecteezy.com/system/resources/previews/006/580/315/non_2x/high-quality-map-of-europe-with-country-border-vector.jpg');
+    background-image: url('france.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,31 +28,34 @@ body {
     color: white;
     text-decoration: none;
     position: absolute;
+    transform-origin: center;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.team-button.united {
+.team-button.psg {
     top: 0;
     left: 25%;
 }
 
-.team-button.city {
+.team-button.lyon {
     top: 0;
     left: 60%;
 }
 
-.team-button.chelsea {
+.team-button.marseille {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
 }
 
-.team-button.arsenal {
+.team-button.lille {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.team-button.liverpool {
+.team-button.monaco {
     top: 50%;
     left: 100%;
     transform: translate(-100%, -50%);
@@ -62,4 +65,10 @@ h1 {
     color: white;
     font-size: 2em;
     margin-bottom: 20px;
+}
+
+.team-button:hover {
+    background-color: green;
+    transform: scale(1.1) translate(0, 0);
+    transition: transform 0.2s, background-color 0.2s;
 }
