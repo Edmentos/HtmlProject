@@ -1,5 +1,5 @@
 body {
-    background-image: url('france.png');
+    background-image: url('italy.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -33,29 +33,32 @@ body {
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.team-button.psg {
+.team-button.juventus {
     top: 0;
     left: 25%;
 }
 
-.team-button.lyon {
+.team-button.acmilan {
     top: 0;
-    left: 60%;
+    left: 75%;
 }
 
-.team-button.marseille {
+.team-button.inter {
     top: 50%;
     left: 0;
+
 }
 
-.team-button.lille {
+.team-button.napoli {
     top: 50%;
     left: 50%;
+
 }
 
-.team-button.monaco {
+.team-button.fior {
     top: 50%;
     left: 100%;
+
 }
 
 h1 {

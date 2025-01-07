@@ -43,23 +43,26 @@ body {
 .team-button.chelsea {
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
 }
 
 .team-button.arsenal {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .team-button.liverpool {
     top: 50%;
     left: 100%;
-    transform: translate(-100%, -50%);
 }
 
 h1 {
     color: black;
     font-size: 2em;
     margin-bottom: 20px;
+}
+
+.team-button:hover {
+    background-color: green;
+    transform: scale(1.1) translate(0, 0);
+    transition: transform 0.2s, background-color 0.2s;
 }

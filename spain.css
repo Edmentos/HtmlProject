@@ -46,23 +46,20 @@ body {
 .team-button.athmadrid {
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
 }
 
 .team-button.athbilb {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .team-button.villa {
     top: 50%;
     left: 100%;
-    transform: translate(-100%, -50%);
 }
 
 h1 {
-    color: white;
+    color: black;
     font-size: 2em;
     margin-bottom: 20px;
 }

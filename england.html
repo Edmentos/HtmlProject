@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Your country-specific CSS -->
     <link rel="stylesheet" href="countryStyle.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FootShop -- England</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 </head>
 
 <body>
-
     <h1>Select a Team</h1>
-    <div class="button-container">
-        <a href="index2.html" class="team-button united">Man Utd</a>
-        <a href="index2.html" class="team-button city">Man City</a>
-        <a href="index2.html" class="team-button chelsea">Chelsea</a>
-        <a href="index2.html" class="team-button arsenal">Arsenal</a>
-        <a href="index2.html" class="team-button liverpool">Liverpool</a>
-    </div>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // region=1 from ?region=1
+        const urlParams = new URLSearchParams(window.location.search);
+        const region = urlParams.get('region'); // "1"
+
+        // For Man Utd = 1, Man City = 2, Liverpool = 3, Arsenal = 4, Chelsea = 5
+        // Example: index2.html?region=1&team=1
+        document.getElementById('teamManUtd').href  = `index2.html?region=${region}&team=1`;
+        document.getElementById('teamManCity').href = `index2.html?region=${region}&team=2`;
+        document.getElementById('teamLiverpool').href = `index2.html?region=${region}&team=3`;
+        document.getElementById('teamArsenal').href = `index2.html?region=${region}&team=4`;
+        document.getElementById('teamChelsea').href = `index2.html?region=${region}&team=5`;
+      });
+    </script>
+
+    <div class="button-container">
+        <a id="teamManUtd" class="team-button united">Man Utd</a>
+        <a id="teamManCity" class="team-button city">Man City</a>
+        <a id="teamLiverpool" class="team-button liverpool">Liverpool</a>
+        <a id="teamArsenal" class="team-button arsenal">Arsenal</a>
+        <a id="teamChelsea" class="team-button chelsea">Chelsea</a>
+    </div>
 </body>
 </html>

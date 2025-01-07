@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pick an Item</title>
+    <!-- Your index2-specific CSS -->
     <link rel="stylesheet" href="index2.css">
+    <meta charset="UTF-8">
+    <title>Pick an Item</title>
 </head>
 <body>
     <h1>Pick an Item</h1>
     <div class="container">
-        <div class="box">
-            <img src="https://teamwear.oneills.com/images/site-content/uploads/2018/11/22/1542897527auckland-crewneck.jpg" alt="Item 1">
+        <!-- Three boxes going to different pages -->
+        <div class="box" id="jerseysBox">
+            <img src="https://teamwear.oneills.com/images/site-content/uploads/2019/10/31/1572523587Soccer-Jersey-front.jpg" alt="Jerseys">
+            <p>Jerseys</p>
         </div>
-        <div class="box">
-            <img src="https://teamwear.oneills.com/images/site-content/uploads/2019/10/31/1572523587Soccer-Jersey-front.jpg" alt="Item 2">
+        <div class="box" id="jumperBox">
+            <img src="https://teamwear.oneills.com/images/site-content/uploads/2018/11/22/1542897527auckland-crewneck.jpg" alt="Jumper">
+            <p>Jumper</p>
         </div>
-        <div class="box">
-            <img src="https://www.oneills.com/media/catalog/product/cache/7c0093f75f453d86e7d165133c528de2/c/o/conn-211-3-gen-bkwhxx-adlt-p2.jpg" alt="Item 3">
+        <div class="box" id="shortsBox">
+            <img src="https://www.oneills.com/media/catalog/product/cache/7c0093f75f453d86e7d165133c528de2/c/o/conn-211-3-gen-bkwhxx-adlt-p2.jpg" alt="Shorts">
+            <p>Shorts</p>
         </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const region = urlParams.get('region'); // "1"
+        const team   = urlParams.get('team');   // e.g. "2"
+
+        // Each box links to a different page, preserving region & team
+        document.getElementById('jerseysBox').addEventListener('click', () => {
+          window.location.href = `jerseys.html?region=${region}&team=${team}`;
+        });
+        document.getElementById('jumperBox').addEventListener('click', () => {
+          window.location.href = `jumper.html?region=${region}&team=${team}`;
+        });
+        document.getElementById('shortsBox').addEventListener('click', () => {
+          window.location.href = `shorts.html?region=${region}&team=${team}`;
+        });
+      });
+    </script>
 </body>
 </html>

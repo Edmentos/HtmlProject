@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Another custom stylesheet for the jerseys page if you have one -->
+    <link rel="stylesheet" href="jerseys.css">
+    <meta charset="UTF-8">
+    <title>Jerseys Page</title>
+</head>
+<body>
+    <h1>Jerseys Page</h1>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const region = urlParams.get('region'); // e.g. "1"
+        const team   = urlParams.get('team');   // e.g. "2"
+
+        // Show them for debugging or further logic
+        document.body.insertAdjacentHTML(
+          'beforeend',
+          `<p>region = ${region}, team = ${team}</p>`
+        );
+
+        // ... Use fetch/AJAX to query your microservice or MySQL based on region/team
+      });
+    </script>
+</body>
+</html>
